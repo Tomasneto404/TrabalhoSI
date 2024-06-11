@@ -1,12 +1,12 @@
-Instituição: Instituto Politécnico do Porto - Escola Superior de Tecnologia e Gestão
-Autor/Aluno: Tomás Leonardo Leão Sousa Neto (8220862)
-Unidade Curricular: 1º Ano - Segurança Informática
-Docente: Ricardo André Fernandes Costa (rfc@estg.ipp.pt)
-Ano Letivo: 2023/2024
+Instituição: Instituto Politécnico do Porto - Escola Superior de Tecnologia e Gestão <br>
+Autor/Aluno: Tomás Leonardo Leão Sousa Neto (8220862) <br>
+Unidade Curricular: 1º Ano - Segurança Informática <br>
+Docente: Ricardo André Fernandes Costa (rfc@estg.ipp.pt) <br>
+Ano Letivo: 2023/2024 <br>
 
 Requisitos:
-XAMPP ou WAMP - Windows
-MAMP - MacOS
+* XAMPP ou WAMP - Windows
+* MAMP - MacOS
 
 Instalação:
 1 - Copiar diretório "trabalho" para "C:\xampp\htdocs";
