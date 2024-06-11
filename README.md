@@ -9,7 +9,7 @@ Requisitos:
 * MAMP - MacOS
 
 Instalação:
-* 1 - Copiar diretório "trabalho" para "C:\xampp\htdocs";
+* 1 - Copiar diretório pasta para "C:\xampp\htdocs";
 * 2 - Executar software XAMP/WAMP ou MAMP e executar o módulo Apache;
 * 3 - Abrir browser em http://localhost
 * 4 - Utilizar a aplicação
