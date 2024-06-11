@@ -15,7 +15,7 @@ Instalação:
 * 4 - Utilizar a aplicação
 <br>
 
-**Nota** 19.0
+**Nota**: 19.0
 
 
 
