@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Página Inicial</title>
+  <title>Criptografia de Mensagens</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -46,7 +46,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Encriptar Mensagem</h1>
+            <h1 class="m-0"></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -69,13 +69,13 @@
             <!-- Map card -->
               <div class="card bg-light d-flex flex-fill">
                 <div class="card-header text-muted border-bottom-0">
-                Criptografia
+                Segurança Informática
                 </div>
                 <div class="card-body pt-0">
                   <div class="row">
-                    <div class="col-7">
-                      <h2 class="lead"><b>Algoritmo: AES-256</b></h2>
-                      <p ><b>Sobre: </b> <a href="pdfs/aes.pdf">Explicação do algoritmo AES</a> </p>
+                    <div class="col-12">
+                      <h2 class="lead"><b>Criptografia de Mensagens</b></h2>
+                      
                       
                     </div>
                   </div>
@@ -85,39 +85,37 @@
         </div>
         <div class="row">
           <!-- Left col -->
-          <section class="col-lg-6">
+          <section class="col-lg-6 connectedSortable">
             <!-- Custom tabs (Charts with tabs)-->
             <div class="card card-secondary">
               <div class="card-header">
-                <h3 class="card-title">Encrypt</h3>
+                <h3 class="card-title">Encriptar</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="POST" action="funcionalidades/msg_enc/enc.php" >
+              <form method="POST" action="functions/msg_enc/enc.php" >
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="Mensagem">Message</label>
-                    <input type="text" class="form-control" id="Message" name="msg" required>
+                    <label for="Mensagem">Mensagem</label>
+                    <textarea type="text" class="form-control" id="Mensagem" placeholder="Mensagem" name="msg" required></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="PublicKey">Key</label>
-                    <input type="text" class="form-control" id="PublicKey" name="key" required 
+                    <label for="Chave">Chave</label>
+                    <input type="text" class="form-control" id="Chave" placeholder="Chave" name="key" required>
                   </div>
                   <div class="form-group">
-                    <label for="EncMessage">Encrypted Message</label>
-                    <input type="text" class="form-control" id="EncMessage" disabled value="<?php
-                    
+                    <label for="MensagemEncriptada">Mensagem encriptada</label>
+                    <textarea type="text" class="form-control" id="MensagemEncriptada" placeholder="Mensagem encriptada" disabled><?php
                       if (isset($_GET['encrypted_msg'])) {
                         echo $_GET['encrypted_msg'];
                       }
-                    
-                    ?>">
+                    ?></textarea>
                   </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-info">Encrypt</button>
+                  <button type="submit" class="btn btn-info">Encriptar</button>
                 </div>
               </form>
             </div>
@@ -125,46 +123,46 @@
           </section>
           <!-- /.Left col -->
 
-          <section class="col-lg-6">
+          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          <section class="col-lg-6 connectedSortable">
             <!-- Custom tabs (Charts with tabs)-->
             <div class="card card-secondary">
               <div class="card-header">
-                <h3 class="card-title">Decrypt</h3>
+                <h3 class="card-title">Desencriptar</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="GET" action="funcionalidades/msg_enc/dec.php" >
+              <form method="POST" action="functions/msg_enc/dec.php">
                 <div class="card-body">
-                <div class="form-group">
-                    <label for="Message">Encrypted Message</label>
-                    <input type="text" class="form-control" id="Message" name="msg" required>
+                  <div class="form-group">
+                    <label for="Mensagem">Mensagem Encriptada</label>
+                    <textarea class="form-control" id="Mensagem" placeholder="Mensagem" name="msg" required></textarea>
                   </div>
                   <div class="form-group">
-                    <label for="PublicKey">Key</label>
-                    <input type="text" class="form-control" id="PublicKey" name="key" required 
+                    <label for="Chave">Chave</label>
+                    <input type="text" class="form-control" id="Chave" placeholder="Chave" name="key"  required>
                   </div>
                   <div class="form-group">
-                  <label for="OriMessage">Original Message</label>
-                    <input type="text" class="form-control" id="OriMessage" disabled value="<?php
-                    
+                    <label for="MensagemEncriptada">Mensagem</label>
+                    <textarea class="form-control" id="MensagemEncriptada" placeholder="Mensagem encriptada" disabled><?php
                       if (isset($_GET['decrypted_msg'])) {
                         echo $_GET['decrypted_msg'];
-                      } 
-                    
-                    ?>">
+                      } elseif (isset($_GET['erro'])) {
+                        echo "Houve um erro com a desencriptação! Confirme a Mensagem e Chave.";
+                      }
+                    ?></textarea>
                   </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-info">Decrypt</button>
+                  <button type="submit" class="btn btn-info">Desencriptar</button>
                 </div>
               </form>
             </div>
             <!-- /.card -->
           </section>
-
-          
+          <!-- right col -->
         </div>
       </div><!-- /.container-fluid -->
     </section>

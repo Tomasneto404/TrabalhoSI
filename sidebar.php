@@ -12,7 +12,7 @@
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         
         <div class="info">
-          <a href="index.php" class="d-block">Tomás Neto - 8220862</a>
+          <a href="https://tomasneto404.github.io/" class="d-block">Tomás Neto - 8220862</a>
         </div>
       </div>
 
@@ -34,19 +34,19 @@
               <li class="nav-item">
                 <a href="msgencryption.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Encriptar Mensagem</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="esteganografia.php" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Esteganografia</p>
+                  <p>Criptogafia Mensagens</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="fileencryption.php" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Encriptar Ficheiros</p>
+                  <p>Criptogafia Ficheiros</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="aes.php" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>AES-256-CBC</p>
                 </a>
               </li>
             </ul>

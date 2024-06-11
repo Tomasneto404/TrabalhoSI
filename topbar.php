@@ -12,13 +12,13 @@
         <a class="nav-link">|</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="msgencryption.php" class="nav-link">Encriptar Mensagem</a>
+        <a href="msgencryption.php" class="nav-link">Criptografia Mensagens</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="esteganografia.php" class="nav-link">Esteganografia</a>
+        <a href="fileencryption.php" class="nav-link">Criptografia Ficheiros</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="fileencryption.php" class="nav-link">Encriptar Ficheiros</a>
+        <a href="aes.php" class="nav-link">AES-256-CBC</a>
       </li>
       
     </ul>

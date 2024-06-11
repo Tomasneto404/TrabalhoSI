@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Página Inicial</title>
+  <title>Criptografia Ficheiros</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -46,7 +46,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Encriptar Ficheiros</h1>
+            <h1 class="m-0"></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -69,13 +69,13 @@
             <!-- Map card -->
               <div class="card bg-light d-flex flex-fill">
                 <div class="card-header text-muted border-bottom-0">
-                Criptografia
+                Segurança Informática
                 </div>
                 <div class="card-body pt-0">
                   <div class="row">
                     <div class="col-7">
-                      <h2 class="lead"><b>Encriptar Ficheiros</b></h2>
-                      <p ><b>Sobre: </b> Explicação toda pipi </p>
+                      <h2 class="lead"><b>Criptografia de Ficheiros</b></h2>
+                      
                       
                     </div>
                   </div>
@@ -95,17 +95,17 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form enctype="multipart/form-data">
+              <form method="post" action="functions/file_enc/enc.php" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="Mensagem">Chave</label>
-                    <input type="text" class="form-control" id="Chave" placeholder="Chave"  required>
+                    <input type="text" class="form-control" id="Chave" placeholder="Chave"  name="key" required>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Ficheiro</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                        <input type="file" class="custom-file-input" id="exampleInputFile" name="file">
                         <label class="custom-file-label" for="exampleInputFile">Escolher ficheiro</label>
                       </div>
                     </div>
@@ -113,7 +113,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-info">Encriptar</button>
+                  <button type="submit" class="btn btn-info" name="upload">Encriptar</button>
                 </div>
               </form>
             </div>
@@ -130,31 +130,42 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form enctype="multipart/form-data">
+              <form method="POST" action="functions/file_enc/dec.php" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group">
                     <label for="exampleInputFile">Ficheiro</label>
                     <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="exampleInputFile">
-                        <label class="custom-file-label" for="exampleInputFile">Escolher ficheiro</label>
+                        <input type="file" name="file" class="custom-file-input" id="exampleInputFile">
+                        <label class="custom-file-label" for="exampleInputFile" >Escolher ficheiro</label>
                       </div>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="Mensagem">Chave</label>
-                    <input type="text" class="form-control" id="Chave" placeholder="Chave" >
+                    <input type="text" class="form-control" id="Chave" placeholder="Chave" name="key" >
                   </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-info">Desencriptar</button>
+                  <button type="submit" class="btn btn-info" name="upload">Desencriptar</button>
                 </div>
               </form>
             </div>
             <!-- /.card -->
           </section>
           <!-- right col -->
+          <section class="col-lg-12 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+            <center>
+              <?php
+                if (isset($_GET['file']) && file_exists('uploads/'.$_GET['file'])) {
+                  echo '<a href="uploads/' . $_GET['file'] . '" class="btn-lg btn-success" download>Download File</a>';
+                }
+              ?>
+            </center>
+            <!-- /.card -->
+          </section>
         </div>
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->

@@ -1,7 +1,7 @@
 <!-- /.content-wrapper -->
 <footer class="main-footer">
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved. <b>(Alterado por: Tomás Neto | 8220862@estg.ipp.pt | 8220862 | LSIRC - ESTG - IPP | 2023/2024)</b>
+    All rights reserved. <b>(Alterado por: Tomás Neto | 8220862@estg.ipp.pt | 8220862 | LSIRC - ESTG - IPP | 2024)</b>
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.1.0
     </div>
